@@ -8,8 +8,8 @@ notifications:
   email:
     recipients:
     - bryan.jimenez@gmail.com
-  slack:
-    secure: 
+  slack: miw-upm:eQZbSvKcKUbr9H4F1bi2ORcs
+
 install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
