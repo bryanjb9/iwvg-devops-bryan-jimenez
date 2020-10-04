@@ -14,4 +14,4 @@
    1. **Next** … **Finish**.
 
 ### Estado del código
-[![Build Status](https://travis-ci.org/Crowded1984/iwvg-devops-daniel-gallardo.svg?branch=develop)](https://travis-ci.org/Crowded1984/iwvg-devops-daniel-gallardo)
+[![Build Status](https://travis-ci.org/bryanjb9/iwvg-devops-bryan-jimenez.svg?branch=master)](https://www.travis-ci.org/github/bryanjb9/iwvg-devops-bryan-jimenez)
