@@ -1,23 +1,24 @@
 language: java
 branches:
   only:
-    - develop
-    - "/^release-[0-999].[0-999]$/"
-    - master
+  - develop
+  - "/^release-[0-999].[0-999]$/"
+  - master
 notifications:
   email:
     recipients:
-      - bryan.jimenez@gmail.com
+    - bryan.jimenez@gmail.com
   slack:
-    secure:
+    secure: 
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  - mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=bryanjb9
-    -Dsonar.login=$SONAR_TOKEN
+- mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=bryanjb9
+  -Dsonar.login=$SONAR_TOKEN
 deploy:
   provider: heroku
-  api_key: "$HEROKU"
+  api_key:
+    secure: e/7C692xnc/1Moa3mwuX3AFyuPNeiVPxemtLt72hx/Dtlvvxk8JEgbZdr5pvuMXrxwuTP3g299Hrcl4QEflDGR9fyG0uLuZps1R5/URVgBWrqlm4bS0sP3v8fQQD3xYhz7FLMPeIazydGntGMYJu9CVLBmxIYx7OMjGeO12t9QqyCvckqgg66zXHh2NuSaqEEUsFmS4RkaQGfCLVA/cyPf+MgI9+kKd/+nYlkjVSAjB+P05Km7vjEbAUDLRXHVNVqqyZ7WsDDJZjT0QNpOpklbNnyQPGF9G2veaztjqoEiTggaY3q83G7KolAVR4/jQ8z+nPu0BJKZgaPH3uvit4aSH3aQI7sfEF/m4va2CjJ7AQg7TuVW5I1yFvHnKTT+o8m98DlUcRurwqugvcV5vjgoskTUa9lYHQ5OYMQT+XxHuU4X8y1gGpyeSo3n4FCzIccjwpCSbRjyka6a+TAwHVMYWlsp9zL91NhsEQHqv+zAEVI+XOhFgZ6ZsbUo7knqyPsxUIJbSEHEbDvBDl3v38L3WNftQvy0odrVucOMsirJgseCgndW9Y/SCC9bvPvGNbo40/u0AAyeJWXm+sk4Z631b1oSuHeE12DW6yZdepxbAoRH+G/44d41bss8zDeBSwH32M0ap/uGBv48VpmL2N7HC8ileVoQ0hcn2Fhyd8oAQ=
   skip_cleanup: true
   on:
     branch: master
