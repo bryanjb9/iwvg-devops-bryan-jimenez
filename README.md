@@ -6,7 +6,7 @@
 1. Clonar el repositorio en tu equipo, **mediante consola**:
 ```sh
 > cd <folder path>
-> git clone https://github.com/:owner/:repo
+> git clone https://github.com/bryanjb9/iwvg-devops-bryan-jimenez.git
 ```
 2. Importar el proyecto mediante **IntelliJ IDEA**
    1. **Import Project**, y seleccionar la carpeta del proyecto.
